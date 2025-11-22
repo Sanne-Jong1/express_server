@@ -1,6 +1,7 @@
 const express = require("express");
 const axios = require("axios");
 const app = express();
+const serverless = require("serverless-http");
 
 app.get("/test",(req,res)=>{
 res.send("success")
@@ -16,4 +17,4 @@ app.get("/getData", async (req, res) => {
   }
 });
 
-module.exports = app;
+module.exports = serverless(app);
