@@ -16,5 +16,4 @@ app.get("/getData", async (req, res) => {
   }
 });
 
-app.listen(3000, () => console.log("Server running"));
 module.exports = app;
